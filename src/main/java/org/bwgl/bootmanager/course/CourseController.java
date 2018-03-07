@@ -13,6 +13,12 @@ public class CourseController {
 	@Autowired
 	private CourseService courseService;
 	
+	/**
+	 * http://localhost:8080/topics/PYTHON/courses
+	 * GET
+	 * @param topicid
+	 * @return
+	 */
 	@RequestMapping("/topics/{topicid}/courses")
 	public List<Course> getAllCourses(@PathVariable String topicid){
 		return courseService.getAllCourses(topicid);
