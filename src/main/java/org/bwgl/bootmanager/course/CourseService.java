@@ -16,5 +16,14 @@ public class CourseService {
 		courseRepository.findByTopicId(topicid).forEach(courses::add);
 		return courses;
 	}
+	public Course getCourse(String topicid, String courseid) {
+		return courseRepository.findByIdAndTopicId(courseid,topicid);
+//		return courseRepository.findOne(courseid);
+	}
+	public void addCourse(Course course) {
+		courseRepository.save(course);
+	}
+	
+	
 
 }
