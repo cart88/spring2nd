@@ -37,12 +37,25 @@ public class TopicController {
 	/**
 	 * http://localhost:8080/topics
 	 * {"id":"PYTHON", "name":"PYTHON_NAME", "description":"PYTHON_DESC"}
-	 * PUT
+	 * POST
 	 * Content-Type   :   application/json
 	 * @param topic
 	 */
 	@RequestMapping(value="/topics",method=RequestMethod.POST)
 	public void addTopic(@RequestBody Topic topic){
 		topicService.addTopic(topic); 
+	}
+	
+	/**
+	 * http://localhost:8080/topic/JAVA
+	 * {"id":"JAVA", "name":"JAVA_NAME_change", "description":"JAVA_DESC_change"}
+	 * PUT
+	 * Content-Type   :   application/json
+	 * @param topic
+	 * @param id
+	 */
+	@RequestMapping(value="/topic/{id}",method=RequestMethod.PUT)
+	public void updateTopic(@RequestBody Topic topic,@PathVariable String id){
+		topicService.updateTopic(topic,id);
 	}
 }
