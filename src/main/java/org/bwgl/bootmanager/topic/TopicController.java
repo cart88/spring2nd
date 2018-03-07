@@ -41,7 +41,7 @@ public class TopicController {
 	 * Content-Type   :   application/json
 	 * @param topic
 	 */
-	@RequestMapping(value="/topics",method=RequestMethod.PUT)
+	@RequestMapping(value="/topics",method=RequestMethod.POST)
 	public void addTopic(@RequestBody Topic topic){
 		topicService.addTopic(topic); 
 	}
