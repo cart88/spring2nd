@@ -58,4 +58,14 @@ public class TopicController {
 	public void updateTopic(@RequestBody Topic topic,@PathVariable String id){
 		topicService.updateTopic(topic,id);
 	}
+	
+	/**
+	 * http://localhost:8080/topic/JAVA
+	 * DELETE
+	 * @param id
+	 */
+	@RequestMapping(value="topic/{id}",method=RequestMethod.DELETE)
+	public void deleteTopic(@PathVariable String id){
+		topicService.deleteTopic(id);
+	}
 }
