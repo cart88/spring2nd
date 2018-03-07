@@ -52,6 +52,14 @@ public class CourseService {
 	public void addCourse(Course course) {
 		courseRepository.save(course);
 	}
+
+	public void updateCourse(Course course) {
+		courseRepository.save(course);
+	}
+
+	public void deleteCourse( String id) {
+		courseRepository.delete(id);
+	}
 	
 	
 
