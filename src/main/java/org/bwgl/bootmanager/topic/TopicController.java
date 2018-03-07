@@ -1,4 +1,4 @@
-package org.bwgl.bootmanager.controller;
+package org.bwgl.bootmanager.topic;
 
 import java.util.Arrays;
 import java.util.List;

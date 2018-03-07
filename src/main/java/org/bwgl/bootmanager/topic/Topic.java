@@ -1,4 +1,4 @@
-package org.bwgl.bootmanager.controller;
+package org.bwgl.bootmanager.topic;
 
 public class Topic {
 	private String id;
